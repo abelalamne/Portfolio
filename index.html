@@ -1,80 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Abel's Portfolio</title>
-    <link rel="stylesheet" href="./asset/css/styles.css">
-    <meta charset="utf-8">
-</head>
-<body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="./asset/img/logo.webp" alt="Abel's Logo">
-            </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Abel's Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/4b97250090.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <div id="header">
+        <div class="container">
             <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#certificates">Certificates</a></li>
+                <img src="images/logo.webp" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
+            <div class="header-text">
+                <p>Full-stack Web Developer</p>
+                <h1>Hello, you are on <span>abel's</span><br> portfolio website</h1>
+            </div>
         </div>
-    </header>
-    <main>
-        <section id="home">
-            <div class="intro-container">
-                <div class="intro-text">
-                    <h1>Abel Alamne Belay</h1>
-                    <p>You are now on my portfolio! I am an electrical engineer and a web developer passionate about creating reliable and engaging applications.</p><br>
-                    <p> Email:  abelalamne@gmail.com</p><br>
-                    <p>Phone no. +251932155658</p>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/me.JPG">
                 </div>
-                <div class="image">
-                    <img src="./asset/img/DANA7215.jpg" alt="Abel Alamne">
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>
+                        I am a Full-Stack Developer with a strong foundation in modern web technologies
+                        and a passion for building scalable, user-focused applications. I enjoy turning
+                        complex problems into simple, elegant solutions using tools like React,
+                        Django, and Tailwind CSS.
+                        </p>
+
+                        <p>
+                        I have hands-on experience developing real-world systems, designing responsive
+                        interfaces, and building secure backend APIs. I’m constantly learning and
+                        improving my skills to stay up-to-date with the latest technologies and best
+                        practices in software development.
+                        </p>
+
+                        <p>
+                        My goal is to create software that is not only functional, but also intuitive,
+                        efficient, and impactful.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Frontend Development</span><br>
+                                React.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Responsive Design</li>
+                            <li><span>Backend Development</span><br>
+                                 Python, Django, REST APIs, Authentication Systems</li>
+                            <li><span>Database & Tools</span><br>
+                                PostgreSQL, MySQL, Git, GitHub, Postman, VS Code</li>
+                            <li><span>Other Skills</span><br>
+                                API Integration, Debugging, System Design, Problem Solving
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <span>Full-Stack Developer — Personal Project</span><br>
+                                Built a complete Non-Performing Loan (NPL) Management System using 
+                                Django, React, and PostgreSQL with modules for asset tracking, 
+                                foreclosure management, and reporting.
+                            </li>
+
+                            <li>
+                                <span>Frontend Developer — Portfolio Projects</span><br>
+                                Developed responsive web interfaces using React and Tailwind CSS, 
+                                focusing on modern UI/UX and mobile-friendly design.
+                            </li>
+
+                            <li>
+                                <span>Backend API Development</span><br>
+                                Designed and implemented RESTful APIs with Django REST Framework, 
+                                including authentication, file uploads, and database integration.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <span>BSc in Electrical Engineering</span><br>
+                                It lays foundation for basic concepts related to IT.
+                            </li>
+                            <li>
+                                <span>MSc in Computer Science</span><br>
+                                Strong foundation in Software Engineering, Database Systems, and Web Development
+                            </li>
+
+                            <li>
+                                <span>Continuous Learning</span><br>
+                                Actively learning advanced system design, UI/UX best practices, and modern frontend tools
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </section>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I'm a versatile engineer with a strong foundation in both electrical engineering and web development. I have experience in building applications using various technologies and love tackling challenging problems.</p>
-            <h3>Skills</h3>
-            <ul class="skills-list">
-                <li>HTML & CSS</li>
-                <li>Java</li>
-                <li>Python</li>
-                <li>SQL & MongoDB</li>
-                <li>Electrical Maintenance</li>
-            </ul>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Grocery Store Management System</h3>
-                <p>A web application for managing inventory and sales for grocery stores, using SQL and MongoDB for database management.</p>
-                <p>another projects will be added here</p>
+        </div>
+    </div>
+    <div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Full-Stack Web Development</h2>
+                <p>
+                    I build complete web applications from front to back using 
+                    modern technologies like React, Django, and PostgreSQL — 
+                    focusing on performance, security, and scalability.
+                </p>
+                <a href="#">Learn more</a>
             </div>
-        </section>
-        <section id="certificates">
-            <h2>Certificates</h2>
-            <div class="certificate">
-                <img src="./asset/img/something.jpg" alt="responsive web design">
-                <p>Responsive web deign(will be added on completion)</p>
+
+            <div>
+                <i class="fa-solid fa-server"></i>
+                <h2>Backend Development</h2>
+                <p>
+                    I design secure RESTful APIs, manage databases, and implement 
+                    business logic using Python and Django to power reliable and 
+                    efficient web systems.
+                </p>
+                <a href="#">Learn more</a>
             </div>
-        </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <div class="social-media">
-                <a href="https://www.linkedin.com/in/abel-alamne-3247b6195/">LinkedIn</a> | 
-                <a href="https://github.com/abelalamne">GitHub</a> | 
-                <a href="https://t.me/abelalamne">Telegram</a>
+
+            <div>
+                <i class="fa-solid fa-laptop-code"></i>
+                <h2>Frontend Development</h2>
+                <p>
+                    I create responsive, user-friendly interfaces using React, 
+                    JavaScript, and Tailwind CSS to deliver smooth user experiences 
+                    across all devices.
+                </p>
+                <a href="#">Learn more</a>
             </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Abel Alamne Belay. All rights reserved.</p>
-    </footer>
-</body>
+
+        </div>
+    </div>
+</div>
+    <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Grocery Store Management System</h3>
+                    <p>
+                        A full-stack web application that helps store owners manage
+                        products, inventory, sales, and reports efficiently, improving
+                        daily operations and decision-making.
+                    </p>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Beauty Salon Booking System</h3>
+                    <p>
+                        An online appointment scheduling system that allows customers
+                        to book services easily while enabling the salon to manage
+                        staff schedules, bookings, and customer records.
+                    </p>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Non-Performing Loan (NPL) Management System</h3>
+                    <p>
+                        A comprehensive banking system designed to manage the full
+                        lifecycle of non-performing loans, including foreclosure,
+                        asset acquisition, legal tracking, disposal, and write-off.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>abelalamne@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+25193215658</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/abel-alamne-3247b6195/"><i class="fa-brands fa-linkedin"></i></a> | 
+                        <a href="https://github.com/abelalamne"><i class="fa-brands fa-github"></i></a> | 
+                        <a href="https://t.me/abelalamne"><i class="fa-brands fa-telegram"></i></a>
+                    </div>
+                    <a href="images/AbelResume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                    
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                
+                    </form>
+                    <span id="msg"></span>
+                </div> 
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Abel Alamne Belay. All rights reserved.</p>
+        </div>
+    </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    
+
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbykJz3SXMP0GaUpGvHdSWeTPWf2AkHZcSNhCB53XOYONpTLfJafVSVUk0vtmWtgSgw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 2000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+    </script>
+    </body>
+
 </html>
